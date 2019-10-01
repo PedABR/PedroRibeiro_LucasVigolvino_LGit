@@ -11,6 +11,6 @@ public class Estadia {
 	}
 	@Override
 	public String toString() {
-		return animal.getNome() + ", " + animal.getTipo() + ", " + dias + " dias com o preço de R$ " + valor;
+		return animal.getNome() + ", " + animal.getEspecie() + ", " + dias + " dias com o preÃ§o de R$ " + valor;
 	}
 }

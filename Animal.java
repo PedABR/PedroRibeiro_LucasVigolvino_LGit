@@ -40,7 +40,7 @@ public class Animal {
 	public String getNome() {
 		return nome;
 	}
-	public String getTipo() {
+	public String getEspecie() {
 		return raca;
 	}
 	public int getIdade() {
@@ -49,7 +49,7 @@ public class Animal {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setTipo(String tipo) {
+	public void setEspecie(String tipo) {
 		this.raca = raca;
 	}
 	public void setIdade(int idade) {

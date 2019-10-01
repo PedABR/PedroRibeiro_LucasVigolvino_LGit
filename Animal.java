@@ -5,7 +5,7 @@ public class Animal {
 	private int idade;
 	public Animal(String nome, String tipo, int idade) {
 		this.nome = nome;
-		this.tipo = tipo;
+		this.raca = raca;
 		this.idade = idade;
 	}
 	@Override
@@ -13,7 +13,7 @@ public class Animal {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((tipo == null) ? 0 : tipo.hashCode());
+		result = prime * result + ((raca == null) ? 0 : tipo.hashCode());
 		return result;
 	}
 	@Override
@@ -30,10 +30,10 @@ public class Animal {
 				return false;
 		} else if (!nome.equals(other.nome))
 			return false;
-		if (tipo == null) {
+		if (raca == null) {
 			if (other.tipo != null)
 				return false;
-		} else if (!tipo.equals(other.tipo))
+		} else if (!raca.equals(other.raca))
 			return false;
 		return true;
 	}
@@ -41,7 +41,7 @@ public class Animal {
 		return nome;
 	}
 	public String getTipo() {
-		return tipo;
+		return raca;
 	}
 	public int getIdade() {
 		return idade;
@@ -50,7 +50,7 @@ public class Animal {
 		this.nome = nome;
 	}
 	public void setTipo(String tipo) {
-		this.tipo = tipo;
+		this.raca = raca;
 	}
 	public void setIdade(int idade) {
 		this.idade = idade;

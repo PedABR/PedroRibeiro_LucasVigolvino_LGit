@@ -1,11 +1,11 @@
 package LabGit;
 
 public class Animal {
-	private String nome, tipo;
+	private String nome, especie;
 	private int idade;
-	public Animal(String nome, String tipo, int idade) {
+	public Animal(String nome, String especie, int idade) {
 		this.nome = nome;
-		this.raca = raca;
+		this.especie = especie;
 		this.idade = idade;
 	}
 	@Override
@@ -13,7 +13,7 @@ public class Animal {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((raca == null) ? 0 : tipo.hashCode());
+		result = prime * result + ((especie == null) ? 0 : tipo.hashCode());
 		return result;
 	}
 	@Override
@@ -30,10 +30,10 @@ public class Animal {
 				return false;
 		} else if (!nome.equals(other.nome))
 			return false;
-		if (raca == null) {
-			if (other.tipo != null)
+		if (especie == null) {
+			if (other.especie != null)
 				return false;
-		} else if (!raca.equals(other.raca))
+		} else if (!especie.equals(other.especie))
 			return false;
 		return true;
 	}
@@ -41,7 +41,7 @@ public class Animal {
 		return nome;
 	}
 	public String getTipo() {
-		return raca;
+		return especie;
 	}
 	public int getIdade() {
 		return idade;
@@ -49,8 +49,8 @@ public class Animal {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public void setTipo(String tipo) {
-		this.raca = raca;
+	public void setTipo(String especie) {
+		this.especie = especie;
 	}
 	public void setIdade(int idade) {
 		this.idade = idade;
